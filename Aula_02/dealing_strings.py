@@ -10,3 +10,8 @@ receber o resultado da comparação lógica que verifica se o tamanho do seu nom
 name = str('Kauan Afonso da silva')
 verificate = len(name) >= 15
 print(verificate)
+
+#pegando somente Kauan
+print(name[:6])
+#pegando somente Afonso
+print(name[6:12])
