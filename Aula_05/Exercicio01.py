@@ -1,3 +1,10 @@
+
+'''
+
+Exercicie to create a function that calculetes 
+the factorial
+
+'''
 def return_fatorial(number):
     number_validated = validate_number(number)
     if number_validated:
@@ -14,7 +21,7 @@ def validate_number(number):
     return number > 0
 
 
-print(return_fatorial(-1))
+print(return_fatorial(1))
     
     
     
