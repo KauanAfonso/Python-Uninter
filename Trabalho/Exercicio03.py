@@ -1,9 +1,11 @@
+#This function return a initial mensagge
 def inicial_message():
     print("Welcome to copiator by Kauan Afonso")
-    
+
+# This function return the price of service chosen
 def escolha_servico():
     while True:
-        print("DIG - Digitalization - R$ 1.10 \n ICO - Colorid printer R$ 1.00\n IPB - Impressão preto e branco - R$0 .40\n FOT - R$0.20")
+        print("\nDIG - Digitalização - R$ 1.10\nICO - Impressão Colorida R$ 1.00\nIPB - Impressão preto e branco - R$0 .40\nFOT - Fotocópia - R$0.20\n")
         serivice = input("Enter the desired service:")
     
         if serivice == "DIG":
@@ -17,12 +19,13 @@ def escolha_servico():
         
         print("Invalid choose. Please chosse again")
 
-def num_page():
-    try:
-        while True:
-            page_number = int(input("Enter the number pages: "))
+# This functions returns the pages numbers selected and the discount on it
+def num_page():  
+    while True:
+        try:
+            page_number = int(input("Enter the number pages:\n"))
             discounted = 0
-            
+
             if page_number < 20:
                 discounted = 0
             elif page_number >= 20 and page_number < 200:
@@ -35,16 +38,15 @@ def num_page():
                 print("We not accepted many pages at once.")
                 continue
             return page_number, discounted
-            
-        
-    except ValueError:
-        print("You must enter just with numbers")
-        
+        except ValueError:
+            print("Character not allowed! You must enter just with numbers")
+
+#This function returns the extra service price chosen by user        
 def extra_service():
-    try:
-        while True:
-            print("1- Encardenação simles - R$ 15.00 \n 2- Encardenação capa dura - R$ 40.00\n 0-Não desejo mais nada")
-            new_service = int(input("Do you geuss add more one service?"))
+    while True:
+        try:
+            print("\n1-Encardenação simles - R$ 15.00\n2-Encardenação capa dura - R$ 40.00\n0-Não desejo mais nada\n")
+            new_service = int(input("Do you wanna add more one service?\n"))
             total = 0
             if new_service == 1:
                 total = 15
@@ -53,12 +55,12 @@ def extra_service():
             elif new_service == 0:
                 total = 0
             else:
-                print("Just 0,1,2 are acepted here")
+                print("Just 0,1,2 are acepted here\n")
                 continue
             return total
-        
-    except ValueError:
-        print("Somente número aceitados...")
+        except ValueError:
+            print("Just number are acepted...\n")
+
         
         
 #Main
